@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // PhoneGap event handler
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            // プッシュ通知受信時のコールバックを登録します
+            window.NCMB.monaca.setHandler
+            (
+                function(jsonData){
+                    // 送信時に指定したJSONが引数として渡されます 
+                    alert("callback :::" + JSON.stringify(jsonData));
+                }
+            );           // console.log("PhoneGap is ready");
+            // デバイストークンを取得してinstallation登録が行われます
+            // ※ aplication_key,client_keyはニフティクラウドmobile backendから発行されたkeyに置き換えてください
+            // ※ sender_idは【GCMとの連携に必要な準備】で作成したProjectのProject Numberを入力してください
+            window.NCMB.monaca.setDeviceToken(
+                 "28f2c134e62f1cdb340f3c42024c93588cd2d96566430966d951bd207e024301",
+                 "0287f6b3084ecc15d596c6e0a8d936d3a322117f012cb928c2fbeb89cb9c6426",
+                 "#####sender_id#####" 
+            );
+        }
+    </script>
+</head>
+<body>
+
+    <h1>HelloWorld!</h1>
+    <a class="button--large" href="phonegap-demo.html">Start Demo</a>
+
+</body>
+</html>
