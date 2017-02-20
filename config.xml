@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="jp.com.ndsip.MonacaPush" version="1.0.2">
+<widget xmlns="http://www.w3.org/ns/widgets" id="jp.co.ndsip.MonacaPush" version="1.0.3">
   <name>MonacaPush</name>
   <description>Made with Monaca (http://monaca.mobi)</description>
   <author/>
@@ -94,6 +94,9 @@
   <platform name="ios">
     <preference name="orientation" value="all"/>
   </platform>
+  <platform name="ios">
+    <preference name="orientation" value="all"/>
+  </platform>
   <preference name="ios-XCBuildConfiguration-TARGETED_DEVICE_FAMILY" value="1,2"/>
   <preference name="AutoHideSplashScreen" value="true"/>
   <preference name="FadeSplashScreen" value="true"/>
@@ -101,7 +104,4 @@
   <access origin="*"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="EnableViewportScale" value="false"/>
-  <platform name="ios">
-    <preference name="orientation" value="all"/>
-  </platform>  
 </widget>
