@@ -104,4 +104,7 @@
   <access origin="*"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="EnableViewportScale" value="false"/>
+  <platform name="ios">
+    <preference name="orientation" value="all"/>
+  </platform> 
 </widget>
